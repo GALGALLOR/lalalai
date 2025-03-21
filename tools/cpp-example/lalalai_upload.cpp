@@ -24,6 +24,8 @@ void uploadData(std::string data)
         curl_easy_setopt(curl, CURLOPT_POST, 1L);
 
         struct curl_slist *list = NULL;
+        //list = curl_slist_append(list, "Content-Disposition: attachment; filename=file.mp3");
+        //list = curl_slist_append(list, "Authorization: license <PASTE LICENSE HERE>"); // TODO: PASTE LICENSE HERE
         list = curl_slist_append(list, "Content-Disposition: attachment; filename=file.mp3");
         list = curl_slist_append(list, "Authorization: license <PASTE LICENSE HERE>"); // TODO: PASTE LICENSE HERE
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, list);

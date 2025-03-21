@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+#& C:/Users/galga/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/galga/Documents/GitHub/lalalai/tools/api/lalalai_vocals.py  --license c80836774dde48af --input videoplayback.mp3 --output ./output --splitter orion --stem vocals --enhanced-processing False --noise-cancelling 1 
+
 
 import cgi
 import json
@@ -168,10 +170,10 @@ def batch_process_for_file(license, input_path, output_path, stem, splitter, enh
         split_result = check_file(file_id)
         print(split_result)
 
-        for url in (split_result['stem_track'], split_result['back_track']):
-            print(f'Downloading the track file "{url}"...')
-            downloaded_file = download_file(url, output_path)
-            print(f'The track file has been downloaded to "{downloaded_file}"')
+        #Vocals only
+        print("Downloading the track file "+split_result['stem_track'])
+        downloaded_file = download_file(split_result['stem_track'], output_path)
+        print(f'The track file has been downloaded to "{downloaded_file}"')
 
         print(f'The file "{input_path}" has been successfully split')
     except Exception as err:
