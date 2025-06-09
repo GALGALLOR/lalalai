@@ -208,7 +208,7 @@ def main():
     parser.add_argument('--noise-cancelling', type=int, default=1, choices=[0, 1, 2], help='noise cancelling level for "voice" stem: (0: mild, 1: normal, 2: aggressive)')
 
     args = parser.parse_args()
-
+    #print("args "+args)
     _validate_stem(args)
 
     if args.stem == 'voice':

@@ -1,0 +1,5 @@
+Flask
+Flask-Cors
+spotipy
+yt-dlp
+python-dotenv
