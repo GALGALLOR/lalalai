@@ -72,4 +72,4 @@ def test_search_acapella(search_query):
         print(f"❌ Search failed: {response.status_code} - {response.text}")
 
 if __name__ == "__main__":
-    print(test_search_acapella("loyal chris brown clean"))
+    print(test_process("https://www.youtube.com/watch?v=0V4MbM-2IFw"))
