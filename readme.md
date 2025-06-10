@@ -39,3 +39,20 @@ Rigistrasse 3, 6300, Zug, Switzerland.
 * GUI frontend for Python script. Currently for Mac only https://github.com/lehenbauer/unmixer (by @lehenbauer)
 
 
+
+### Running the Flask webapp
+
+1. Start the API server:
+
+```bash
+python main.py
+```
+
+2. Launch the web interface in another terminal:
+
+```bash
+python webapp/app.py
+```
+
+The interface will be available at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+

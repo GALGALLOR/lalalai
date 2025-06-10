@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Convert Song to Acapella</h1>
+<form method="post">
+    <input type="text" name="url" placeholder="YouTube URL" value="{{ request.form.get('url','') }}">
+    <button type="submit">Convert</button>
+</form>
+<ul>
+{% if result %}
+    <li>{{ result.title }}<br>
+        <video src="{{ result.url }}" controls></video>
+    </li>
+{% endif %}
+</ul>
+{% endblock %}

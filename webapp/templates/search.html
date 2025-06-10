@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Search by Song</h1>
+<form method="get">
+    <input type="text" name="q" placeholder="Enter song" value="{{ request.args.get('q', '') }}">
+    <button type="submit">Search</button>
+</form>
+<ul>
+{% for item in results %}
+    <li>{{ item.title }}<br>
+        <video src="{{ item.url }}" controls></video>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Convert Playlist to Acapella</h1>
+<form method="post">
+    <input type="text" name="url" placeholder="Playlist URL" value="{{ request.form.get('url','') }}">
+    <button type="submit">Convert</button>
+</form>
+<ul>
+{% for item in results %}
+    <li>{{ item.title }}<br>
+        <video src="{{ item.url }}" controls></video>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
