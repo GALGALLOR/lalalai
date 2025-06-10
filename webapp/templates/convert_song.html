@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Convert Song to Acapella</h1>
+<form method="post">
+  <input type="text" name="url" placeholder="Song URL">
+  <input type="text" name="license" placeholder="License key">
+  <button type="submit">Convert</button>
+</form>
+{% if results %}
+<ul>
+  {% for r in results %}
+  <li>{{ r }}<br>
+    <video width="320" controls>
+      <source src="{{ r }}">
+    </video>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

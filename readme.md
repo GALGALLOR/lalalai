@@ -39,3 +39,14 @@ Rigistrasse 3, 6300, Zug, Switzerland.
 * GUI frontend for Python script. Currently for Mac only https://github.com/lehenbauer/unmixer (by @lehenbauer)
 
 
+
+### Running the Flask Web App
+
+A lightweight web interface is available in the `webapp/` directory. Install the required packages and start the server:
+
+```bash
+pip install flask yt_dlp
+python webapp/app.py
+```
+
+Then open `http://127.0.0.1:5000` in your browser.
