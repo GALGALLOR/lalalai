@@ -39,3 +39,13 @@ Rigistrasse 3, 6300, Zug, Switzerland.
 * GUI frontend for Python script. Currently for Mac only https://github.com/lehenbauer/unmixer (by @lehenbauer)
 
 
+
+### Running tests
+
+The project uses [pytest](https://pytest.org) for its test suite. To run the tests, execute:
+
+```bash
+pytest
+```
+
+This command will discover and run all tests in the `tests/` directory.
