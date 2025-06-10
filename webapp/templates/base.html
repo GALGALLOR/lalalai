@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <title>LALAL.AI Web App</title>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('search') }}">Search by Song</a> |
+    <a href="{{ url_for('search_playlist') }}">Search Playlist</a> |
+    <a href="{{ url_for('convert_playlist') }}">Convert Playlist to Acapella</a> |
+    <a href="{{ url_for('convert_song') }}">Convert Song to Acapella</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
