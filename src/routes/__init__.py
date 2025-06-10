@@ -12,7 +12,7 @@ routes = Blueprint('routes', __name__)
 def process_song():
     data = request.get_json()
     youtube_url = data.get('url')
-    lalal_license = os.getenv('lalalal_ai_license')
+    lalal_license = "c80836774dde48af"
     if not youtube_url or not lalal_license:
         return jsonify({'error': 'URL and license required'}), 400
 
